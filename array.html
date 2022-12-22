@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <title>array important methods</title>
+	</head>
+	<body>
+	
+		<script>
+		//filter 
+			let items=[{name:"biriyani",price:"100"},
+			{name:"dosa",price:"25"},
+			{name:"idaly",price:"30"},
+			{name:"pongal",price:"50"},
+			{name:"chicken",price:"150"},
+			{name:"mutton",price:"250"},
+			{name:"soup",price:"25"}
+			];
+			
+			let iteamfilter=items.filter((item)=>{
+				return item.price<100;
+			});
+			
+			console.log(iteamfilter)
+		//map
+		
+		let itemmap=items.map(item =>{
+			return item.price
+		})
+		console.log(itemmap);
+		
+		//find method
+		
+		let itemfind=items.find((item)=>{
+			return item.name==="dosa";
+		})
+		
+		console.log(itemfind);
+		
+		
+		//foreach
+		
+		items.forEach((item)=>{
+			console.log(item.price *2);
+		})
+		
+		//some true false return panum
+			let itemsome=items.some((item)=>{
+			return item.price<=100;
+		})
+		
+		console.log(itemsome);
+		
+		//every true false return panum
+		
+		let itemevery=items.every((item)=>{
+			return item.price<=100;
+		})
+		
+		console.log(itemevery);
+		
+		//reduce t
+		
+		 let total =items.reduce((currenttotal,item)=>{
+			return item.price + currenttotal;
+		 },0);
+		 console.log(total);
+		
+		
+		</script>
+	
+	</body>
+</html>
